@@ -31,13 +31,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    // TODO: 8/20/16 1 - start the intent and and go to another activity which is the sliding.
     public void loadTutorial() {
         Intent mainAct = new Intent(this, MaterialTutorialActivity.class);
         mainAct.putParcelableArrayListExtra(MaterialTutorialActivity.MATERIAL_TUTORIAL_ARG_TUTORIAL_ITEMS, getTutorialItems(this));
+        // TODO: 8/20/16 2 - must start activity with result, so we can do something next after done
         startActivityForResult(mainAct, REQUEST_CODE);
-
     }
 
+    // TODO: 8/20/16 3 add many as possible the instruction here and return an arraylist of it.
     private ArrayList<TutorialItem> getTutorialItems(Context context) {
         TutorialItem tutorialItem1 = new TutorialItem(R.string.slide_1_african_story_books, R.string.slide_1_african_story_books,
                 R.color.slide_1, R.drawable.tut_page_1_front,  R.drawable.tut_page_1_background);
@@ -59,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
         return tutorialItems;
     }
+
+    // TODO: 8/20/16 4 so something when done watching.
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         //    super.onActivityResult(requestCode, resultCode, data);
