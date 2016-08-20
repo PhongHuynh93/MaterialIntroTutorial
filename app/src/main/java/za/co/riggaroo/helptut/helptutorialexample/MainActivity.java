@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     // TODO: 8/20/16 3 add many as possible the instruction here and return an arraylist of it.
     private ArrayList<TutorialItem> getTutorialItems(Context context) {
+//        image with foreground and background
         TutorialItem tutorialItem1 = new TutorialItem(R.string.slide_1_african_story_books, R.string.slide_1_african_story_books,
                 R.color.slide_1, R.drawable.tut_page_1_front,  R.drawable.tut_page_1_background);
 
